@@ -15,11 +15,17 @@ class StorePicker extends React.Component {
       
       //1. Stop the form from submitting
       event.preventDefault();
-     // console.log("Going to store");
+      // console.log("Going to store");
+      
       //2. get the text from that input don't reference the dom
-      console.log(this.myInput.value.value);
+      let storeName = console.log(`in goToStore() ${this.myInput.value.value}`); //clog doesn't store anything to the variable 
+      //console.log(`storeName = ${storeName}`);
+      storeName = this.myInput.value.value;
+      console.log(`storeName = ${storeName}`);
+      
       
       // 3. Change the page to /store/whatever-they-entered 
+      this.props.history.push(`/store/${storeName}`);
     }
     
     componentDidmount(){
