@@ -11,6 +11,11 @@ class App extends React.Component {
     order: {}
   }
 
+  otherstate ={
+    dogs: {},
+    cats: {}
+  }
+  
   addFish = fish => {
     // 1. Take a copy of the existing state;  never want to create a mutation; make a copy of existing state
     const fishes = { ...this.state.fishes }
@@ -47,7 +52,7 @@ class App extends React.Component {
             ))}
           </ul>
         </div>
-        <Order />
+        <Order fishes={this.state.fishes} order={this.state.order}/>
         <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     )
