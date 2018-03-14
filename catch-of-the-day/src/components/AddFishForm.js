@@ -34,9 +34,9 @@ createFish = (event) => {
           <input name="name" ref={this.nameRef} type="text" placeholder="Name"/>
           <input name="price" ref={this.priceRef} type="text" placeholder="Price"/>
           <select name="status" ref={this.statusRef}>
-            <option value="available">Fresh!</option>
-            <option value="available">So Clean!</option>
-            <option value="available">Sold out-- like the sucka you are!</option>
+            <option value="available">available</option>
+            <option value="so clean, not mean">so clean, not mean</option>
+            <option value="sold out">sold out</option>
           </select>
           <textarea name="desc" ref={this.descRef} type="text" placeholder="Desc"/>
           <input name="image" ref={this.imageRef} type="text" placeholder="Image"/>
